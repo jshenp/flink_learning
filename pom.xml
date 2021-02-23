@@ -9,7 +9,6 @@
     <packaging>pom</packaging>
     <version>1.0</version>
     <modules>
-        <module>com.jshen.sql</module>
         <module>flink-learning-sql</module>
         <module>flink-learning-connectors</module>
         <module>flink-learning-state</module>
@@ -17,6 +16,8 @@
         <module>flink-learning-watermark</module>
         <module>flink-learning-cep</module>
         <module>flink-learning-basic</module>
+        <module>flink-learning-checkpoint</module>
+        <module>flink-learning-utils</module>
     </modules>
 
     <properties>
@@ -103,7 +104,11 @@
             <version>${flink.version}</version>
         </dependency>
 
-
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+            <version>3.3.0</version>
+        </dependency>
 
 
     </dependencies>
@@ -159,7 +164,6 @@
                 </executions>
             </plugin>
 
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -185,10 +189,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-
         </plugins>
     </build>
-
-
 </project>
